@@ -19,10 +19,9 @@ class TheWholeGame extends Component
     }
     start(comp)
     {
-        let length = 8 + Math.floor(4 * Math.random()); // 8 - 12
         if(comp.loading) return;        
         comp.setState({overlayShown: true, overlayMessage:"Fetching a word", overlayMessageButton:"Loading..."});
-        fetch(`http://www.setgetgo.com/randomword/get.php?len=${length}`, {mode: 'cors'}).then((resp) =>
+        fetch(`http://www.omaralshaker.com/word.php`, {mode: 'cors'}).then((resp) =>
         {
            return resp.text();
         }).then((text) => { 
