@@ -31,7 +31,6 @@ class GameBoard extends Component
                 new Audio(YouWin),
                 new Audio(YouLose)            
             ];
-            console.log(this.playeableSoundPlayers)
         }
         else this.setState({chars, lettersJSX, mistakes, mistakesJSX});
         this.score = 0;        
