@@ -1,0 +1,71 @@
+.game-container
+{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 94px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 94px 3px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 94px 3px rgba(0,0,0,0.27);
+    background: #f9f9f9; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #f9f9f9 0%, #f9f9f9 86%, #ffffff 87%, #4d69fa 87%, #4d69fa 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #f9f9f9 0%,#f9f9f9 86%,#ffffff 87%,#4d69fa 87%,#4d69fa 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #f9f9f9 0%,#f9f9f9 86%,#ffffff 87%,#4d69fa 87%,#4d69fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#4d69fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.game-container:focus { /*disable ugly focus border */
+    outline: none;
+}
+.singleLetter
+{
+    width: 3%;
+    padding: 1%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    background: #333;
+    margin: 1%;
+    border-radius: 10% / 8%;
+    display: inline-block;
+    font-size: 3em;
+    color: #fff;
+    vertical-align: top;
+}
+.lettersDisplay
+{
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.tried-letters
+{
+    margin: 20px;
+    float: right;
+    width: 50%;
+    min-width: 150px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #909297;
+    text-align: left;
+     word-wrap: break-word;
+     padding: 10px;
+}
+.tried-letters span
+{
+    font-size: 1.5em;
+    color: #4d69fa;
+}
+@media (max-width: 685px) {
+    .tried-letters
+    {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10%;
+        display: block;
+        font-size: 0.7em;
+        display: block;
+        text-align: center;
+         margin: 1px;
+    }
+}

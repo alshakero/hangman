@@ -1,0 +1,23 @@
+html, body
+{    
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  padding: 6%;
+  background: #3b4163;
+  font-family: AllerDisplay;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+#root
+{
+    height: 100%
+}
+

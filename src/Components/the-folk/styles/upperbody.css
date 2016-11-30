@@ -1,0 +1,67 @@
+.neck
+{
+    display: inline-block;
+    width: 100%;
+    margin-top: -10%;
+    height: 10%;
+}
+.neck-itself
+{
+    display: inline-block;
+    width: 13%;
+    height: 100%;
+    background: #ffcd8a
+}
+.torso-and-arms
+{
+    display: inline-block;
+    width: 100%;
+    margin-top: -5%;
+    height: 20%;
+}
+.torso
+{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    vertical-align: top;
+}
+.hand
+{
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    background: #ffcd8a;
+     display: inline-block;
+}
+.arm
+{
+    height: 120%;
+    display: inline-block;
+    width: 15%;
+    vertical-align: bottom;
+    transform-origin: 50% 0%;
+    border-radius: 20% / 6%;
+}
+.left-arm
+{
+    background-color: #8ac657;
+    transform: rotate(30deg);
+    margin: 2.7% -13% 0px 13%;
+}
+.right-arm
+{
+    background-color: #4ea06a;
+    transform: rotate(-30deg);
+    margin: 2.7% 13% 0px -13%;
+}
+.left-torst
+{
+    background-color: #8ac657;
+    border-top-left-radius: 5%;
+}
+.right-torst
+{
+    background-color: #4ea06a;
+    border-top-right-radius: 5%;
+}

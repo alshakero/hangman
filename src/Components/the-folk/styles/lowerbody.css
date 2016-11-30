@@ -1,0 +1,50 @@
+.hip-and-lower-body
+{
+    display: inline-block;
+    width: 100%;
+    margin-top: -11%;
+    height: 20%;
+    vertical-align: top;
+}
+#hip
+{
+    display: inline-block;
+    width: 40%;
+    height: 30%;
+    background-color: #3c5a92
+}
+.legs
+{
+    height: 100%;
+    width: 100%;
+    margin-top: -10%;
+}
+.leg
+{
+    height: 140%;
+    display: inline-block;
+    width: 15%;
+    vertical-align: bottom;
+    transform-origin: 50% 0%;
+    border-radius: 20% / 6%;
+}
+.left-leg
+{
+    background-color: #3c5a92;
+    transform: rotate(10deg);
+    margin: 2.7% 20% 0px 0%;
+}
+.right-leg
+{
+    background-color: #3c5a92;
+    transform: rotate(-10deg);
+    margin: 2.7% 0% 0px -13%;
+}
+.foot
+{
+    width: 15%;
+    height: 20%;
+    border-radius: 20% / 40%;
+    background: #ffcd8a;
+    display: inline-block;
+}
