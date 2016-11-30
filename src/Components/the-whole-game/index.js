@@ -12,6 +12,7 @@ class TheWholeGame extends Component
     }
     gameOver(comp, won)
     {
+        window.scrollTo(0, 0);
         if(won)
             comp.setState({overlayShown: true, overlayMessage:"You win!", overlayMessageButton:"New game"});
         else

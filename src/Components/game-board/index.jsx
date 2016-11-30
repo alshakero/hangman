@@ -31,6 +31,11 @@ class GameBoard extends Component
                 new Audio(YouWin),
                 new Audio(YouLose)            
             ];
+            this.keyBoardButtons = [];
+            for(let i = 65; i < 91; i++)
+            {
+                this.keyBoardButtons.push(<span key={i} onClick={() => {this.recordChar(String.fromCharCode(i), this)}} className="kb-btn">{String.fromCharCode(i)}</span>);
+            }
         }
         else this.setState({chars, lettersJSX, mistakes, mistakesJSX});
         this.score = 0;        
@@ -57,72 +62,69 @@ class GameBoard extends Component
         }
         catch(e){}
     }
+    recordChar(char, comp)
+    {
+        let mistakes = comp.state.mistakes;
+        if(comp.state.chars.indexOf(char) === -1)
+        {   
+            this.playAudio(0);
+            if(mistakes.indexOf(char) === -1)
+            {
+                mistakes.push(char);
+                let mistakesJSX = mistakes.map((el, i) => {return <span key={i}>{el}</span>});
+                comp.setState({mistakes, mistakesJSX});                  
+            }
+            else // already made this mistake?
+            {
+                let index = mistakes.indexOf(char);
+                comp.state.mistakesJSX[index] = <span key={index} style={{color: '#e888b9'}}>{char}</span>
+                comp.setState({mistakesJSX: comp.state.mistakesJSX});
+                setTimeout(() => {
+                    comp.state.mistakesJSX[index] = <span key={index}>{char}</span>
+                    comp.setState({mistakesJSX: comp.state.mistakesJSX});
+                }, 100);
+            }
+            //check if game is over
+            if(mistakes.length > 10)
+            {
+                this.playAudio(3);
+                this.gameOver(comp.props.parent, false);
+            }
+        }
+        else
+        {
+            this.playAudio(1);
+            let lettersJSX = this.state.lettersJSX;
+            for(let i = 0; i < comp.state.chars.length; i++)
+            {
+                if(comp.state.chars[i] === char)
+                {
+                    lettersJSX[i] = <div key={i} data-solved={true} className="singleLetter">{char}</div>;
+                }
+            }
+            let score = lettersJSX.filter((x) => x.props['data-solved']).length;                
+            comp.setState({lettersJSX}); 
+
+            //check if game has won
+            if(score === comp.state.chars.length)
+            {
+                this.playAudio(2);
+                this.gameOver(comp.props.parent, true);
+            }
+        }
+    }
     onKeyUp(ev, reactnode)
     {
         let e = ev.nativeEvent;
         if(e.key.match(/[a-z]/i) && e.key.length === 1) // A-Z
         {
-            let mistakes = reactnode.state.mistakes;
             let char = e.key.toUpperCase();
-            if(reactnode.state.chars.indexOf(char) === -1)
-            {   
-               this.playAudio(0);
-                if(mistakes.indexOf(char) === -1)
-                {
-                    mistakes.push(char);
-                    let mistakesJSX = mistakes.map((el, i) => {return <span key={i}>{el}</span>});
-                    reactnode.setState({mistakes, mistakesJSX});                  
-                }
-                else // already made this mistake?
-                {
-                   let index = mistakes.indexOf(char);
-                   reactnode.state.mistakesJSX[index] = <span key={index} style={{color: '#e888b9'}}>{char}</span>
-                   reactnode.setState({mistakesJSX: reactnode.state.mistakesJSX});
-                   setTimeout(() => {
-                        reactnode.state.mistakesJSX[index] = <span key={index}>{char}</span>
-                        reactnode.setState({mistakesJSX: reactnode.state.mistakesJSX});
-                   }, 100);
-                }
-                //check if game is over
-                if(mistakes.length > 10)
-                {
-                    this.playAudio(3);
-                    this.gameOver(reactnode.props.parent, false);
-                }
-            }
-            else
-            {
-               this.playAudio(1);
-                let lettersJSX = this.state.lettersJSX;
-                for(let i = 0; i < reactnode.state.chars.length; i++)
-                {
-                    if(reactnode.state.chars[i] === char)
-                    {
-                        lettersJSX[i] = <div key={i} data-solved={true} className="singleLetter">{char}</div>;
-                    }
-                }
-                let score = lettersJSX.filter((x) => x.props['data-solved']).length;                
-                reactnode.setState({lettersJSX}); 
-
-                //check if game has won
-                if(score === reactnode.state.chars.length)
-                {
-                    this.playAudio(2);
-                    this.gameOver(reactnode.props.parent, true);
-                }
-            }
+            this.recordChar(char, reactnode);
         }
-    }
-    showKeyBoard()
-    {
-        try{
-            document.getElementById('game-kb-catcher').focus();
-        }
-        catch(e){}
     }
     render()
     {
-        return <div className="game-container" onClick={this.showKeyBoard}>
+        return <div id="game-kb-catcher" className="game-container" tabIndex="0" onKeyDown={(el) => {this.onKeyUp(el, this)}}>
             <div>
                 <TheFolk mistakes={this.state.mistakes.length} style={{float: 'left'}} />
                 <div style={{}} className="tried-letters">
@@ -134,7 +136,9 @@ class GameBoard extends Component
                 <div style={{clear: 'both'}}/>
             </div>
                 <div className="lettersDisplay">
-                 <input id="game-kb-catcher" type="text" tabIndex="0" onKeyDown={(el) => {this.onKeyUp(el, this)}} /> 
+                    <div className="mobile-keyboard">
+                        {this.keyBoardButtons}
+                    </div>
                     {this.state.lettersJSX}                
                 </div>
                 {this.soundPlayers}

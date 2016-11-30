@@ -66,6 +66,15 @@
         text-align: center;
          margin: 1px;
     }
+    .mobile-keyboard
+    {
+        display: block!important;;
+        margin: 20px 0px 20px 0px;
+    }
+}
+.mobile-keyboard
+{
+    display: none;
 }
 .lettersDisplay input
 {
@@ -78,4 +87,17 @@
 } 
 lettersDisplay input:focus { /*disable ugly focus border */
     outline: none;
+}
+.kb-btn
+{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #3b4163;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 11pt;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
 }
