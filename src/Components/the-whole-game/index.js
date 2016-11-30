@@ -21,7 +21,7 @@ class TheWholeGame extends Component
     {
         if(comp.loading) return;        
         comp.setState({overlayShown: true, overlayMessage:"Fetching a word", overlayMessageButton:"Loading..."});
-        fetch(`http://www.omaralshaker.com/word.php`, {mode: 'cors'}).then((resp) =>
+        fetch("https://www.omaralshaker.com/word.php", {mode: 'cors'}).then((resp) =>
         {
            return resp.text();
         }).then((text) => { 
