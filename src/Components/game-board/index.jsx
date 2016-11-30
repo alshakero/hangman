@@ -113,9 +113,16 @@ class GameBoard extends Component
             }
         }
     }
+    showKeyBoard()
+    {
+        try{
+            document.getElementById('game-kb-catcher').focus();
+        }
+        catch(e){}
+    }
     render()
     {
-        return <div id="game-kb-catcher" className="game-container" tabIndex="0" onKeyDown={(el) => {this.onKeyUp(el, this)}}>
+        return <div className="game-container" onClick={this.showKeyBoard}>
             <div>
                 <TheFolk mistakes={this.state.mistakes.length} style={{float: 'left'}} />
                 <div style={{}} className="tried-letters">
@@ -127,6 +134,7 @@ class GameBoard extends Component
                 <div style={{clear: 'both'}}/>
             </div>
                 <div className="lettersDisplay">
+                 <input id="game-kb-catcher" type="text" tabIndex="0" onKeyDown={(el) => {this.onKeyUp(el, this)}} /> 
                     {this.state.lettersJSX}                
                 </div>
                 {this.soundPlayers}

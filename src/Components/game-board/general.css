@@ -12,9 +12,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#4d69fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
-.game-container:focus { /*disable ugly focus border */
-    outline: none;
-}
+
 .singleLetter
 {
     width: 3%;
@@ -68,4 +66,16 @@
         text-align: center;
          margin: 1px;
     }
+}
+.lettersDisplay input
+{
+    width: 1px;
+    border:none;
+    position: absolute;
+    outline: none;
+    cursor:none;
+    opacity: 0;
+} 
+lettersDisplay input:focus { /*disable ugly focus border */
+    outline: none;
 }
