@@ -8,6 +8,7 @@
     "url": "https://github.com/alshakero/NG-quiz.git"
   },
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
