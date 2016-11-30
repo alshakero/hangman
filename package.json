@@ -1,5 +1,6 @@
 {
   "name": "netguru",
+  "homepage": "https://alshakero.github.io/NG-quiz/",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
