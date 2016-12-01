@@ -11,7 +11,7 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 ### Features
 - Fully responsive. 
 - Works in all major browsers. Retina fellas are covered.
-- Lightweight. The whole app with it's assets is **~95KB**. 
+- Lightweight. The whole app with its assets is **~95KB**. 
 - Own keyboard. For a better mobile/touch-device expeirence, I added a keyboard to the game, resize the window and it will pop.
 
 
