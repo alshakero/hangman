@@ -1,11 +1,11 @@
 {
   "main.css": "static/css/main.dbe423d9.css",
   "main.css.map": "static/css/main.dbe423d9.css.map",
-  "main.js": "static/js/main.2b67862f.js",
-  "main.js.map": "static/js/main.2b67862f.js.map",
-  "static\\media\\bad_choice.mp3": "static/media/bad_choice.ae5c06ad.mp3",
-  "static\\media\\good_choice.mp3": "static/media/good_choice.ad35304a.mp3",
+  "main.js": "static/js/main.e04a4144.js",
+  "main.js.map": "static/js/main.e04a4144.js.map",
+  "static\\media\\bad_choice.wav": "static/media/bad_choice.16d7d12e.wav",
+  "static\\media\\good_choice.wav": "static/media/good_choice.fec37a7e.wav",
   "static\\media\\sweat.svg": "static/media/sweat.4ff9a072.svg",
-  "static\\media\\you_lose.mp3": "static/media/you_lose.e0c8c86a.mp3",
-  "static\\media\\you_win.mp3": "static/media/you_win.435544ea.mp3"
+  "static\\media\\you_lose.wav": "static/media/you_lose.c97a26fe.wav",
+  "static\\media\\you_win.wav": "static/media/you_win.a1f52871.wav"
 }
