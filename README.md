@@ -15,7 +15,7 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 - Own keyboard. For a better mobile/touch-device expeirence, I added a keyboard to the game, resize the window and it will pop.
 
 
-### Sneak Peaks *(Chrome developer tools shots)*
+### Sneak Peeks *(Chrome developer tools shots)*
 ### iOS Safari
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/intro/ios.jpg)
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/in/ios.jpg)
