@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main.dbe423d9.css",
-  "main.css.map": "static/css/main.dbe423d9.css.map",
-  "main.js": "static/js/main.37e0c6d6.js",
-  "main.js.map": "static/js/main.37e0c6d6.js.map",
+  "main.css": "static/css/main.048167eb.css",
+  "main.css.map": "static/css/main.048167eb.css.map",
+  "main.js": "static/js/main.4a0fb081.js",
+  "main.js.map": "static/js/main.4a0fb081.js.map",
   "static\\media\\bad_choice.wav": "static/media/bad_choice.16d7d12e.wav",
   "static\\media\\good_choice.wav": "static/media/good_choice.fec37a7e.wav",
-  "static\\media\\sweat.svg": "static/media/sweat.2349ceb5.svg",
+  "static\\media\\sweat.svg": "static/media/sweat.95933757.svg",
   "static\\media\\you_lose.wav": "static/media/you_lose.c97a26fe.wav",
   "static\\media\\you_win.wav": "static/media/you_win.a1f52871.wav"
 }
