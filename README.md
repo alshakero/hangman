@@ -16,7 +16,7 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 
 
 ### Sneak Peeks *(Chrome developer tools shots)*
-### iOS Safari
+### Mobile
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/intro/ios.jpg)
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/in/ios.jpg)
 
