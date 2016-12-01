@@ -1,6 +1,7 @@
 .game-container
 {
     width: 100%;
+
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 94px 3px rgba(0,0,0,0.27);
     -moz-box-shadow: 0px 0px 94px 3px rgba(0,0,0,0.27);
@@ -12,7 +13,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#4d69fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
-
 .singleLetter
 {
     width: 3%;
@@ -76,6 +76,12 @@
 {
     display: none;
 }
+.mobile-keyboard p
+{
+    font-size: 0.7em;
+    text-transform: uppercase;
+    color: #909297;
+}
 .lettersDisplay input
 {
     width: 1px;
@@ -85,7 +91,7 @@
     cursor:none;
     opacity: 0;
 } 
-lettersDisplay input:focus { /*disable ugly focus border */
+.lettersDisplay input:focus { /*disable ugly focus border */
     outline: none;
 }
 .kb-btn

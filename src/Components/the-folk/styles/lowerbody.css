@@ -2,7 +2,7 @@
 {
     display: inline-block;
     width: 100%;
-    margin-top: -11%;
+    margin-top: -10.5%;
     height: 20%;
     vertical-align: top;
 }
@@ -27,12 +27,14 @@
     vertical-align: bottom;
     transform-origin: 50% 0%;
     border-radius: 20% / 6%;
+    position: relative;
+    z-index: 2;
 }
 .left-leg
 {
     background-color: #3c5a92;
     transform: rotate(10deg);
-    margin: 2.7% 20% 0px 0%;
+    margin: 2.7% 20% 0px 0%;    
 }
 .right-leg
 {
@@ -47,4 +49,6 @@
     border-radius: 20% / 40%;
     background: #ffcd8a;
     display: inline-block;
+    position: relative;
+    z-index: 1;
 }

@@ -1,13 +1,3 @@
-.background
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    text-align: center;
-}
 .horizontal-shift
 {
     width: 65%;
@@ -54,4 +44,11 @@
         position: relative;
         box-sizing: border-box;
     }
+}
+.chamber-wrapper div, .chamber-wrapper span
+{
+    opacity: 1;
+    -webkit-transition:all 0.5s cubic-bezier(0,1.38,.84,-1.35);
+	transition:all 0.5s cubic-bezier(0,1.38,.84,-1.35);
+	-moz-transition:all 0.5s cubic-bezier(0,1.38,.84,-1.35);	
 }

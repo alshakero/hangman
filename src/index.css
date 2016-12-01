@@ -5,19 +5,32 @@ html, body
     box-sizing: border-box;
 }
 body {
-  padding: 6%;
   background: #3b4163;
   font-family: AllerDisplay;
-   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-     -khtml-user-select: none; /* Konqueror */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  not supported by any browser */
+    
+    /* disable selection */
+   -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #root
 {
-    height: 100%
+      margin: auto;
+      width: 86%;
+      padding: 1%; 
 }
-
+@media (max-width: 685px) {
+  #root
+  {
+        margin: auto;
+        width: 95%;
+        padding: 2%; 
+  }
+}

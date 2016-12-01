@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TheFolk from '../the-folk';
-import BadChoice from './bad_choice.mp3';
-import GoodChoice from './good_choice.mp3';
-import YouWin from './you_win.mp3';
-import YouLose from './you_lose.mp3';
+import BadChoice from './sounds/bad_choice.mp3';
+import GoodChoice from './sounds/good_choice.mp3';
+import YouWin from './sounds/you_win.mp3';
+import YouLose from './sounds/you_lose.mp3';
 
 import './general.css';
 
@@ -82,7 +82,7 @@ class GameBoard extends Component
                 setTimeout(() => {
                     comp.state.mistakesJSX[index] = <span key={index}>{char}</span>
                     comp.setState({mistakesJSX: comp.state.mistakesJSX});
-                }, 100);
+                }, 300);
             }
             //check if game is over
             if(mistakes.length > 10)
@@ -113,23 +113,22 @@ class GameBoard extends Component
             }
         }
     }
-    onKeyUp(ev, reactnode)
-    {
-        let e = ev.nativeEvent;
-        if(e.key.match(/[a-z]/i) && e.key.length === 1) // A-Z
-        {
-            let char = e.key.toUpperCase();
-            this.recordChar(char, reactnode);
+    onKeyUp(ev)
+    {        
+        let char = ("" + ev.key).toUpperCase(); 
+        if(char.match(/[a-z]/i) && char.length === 1) // A-Z and not shift, alt etc..
+        {           
+            this.recordChar(char, this);
         }
     }
     render()
     {
-        return <div id="game-kb-catcher" className="game-container" tabIndex="0" onKeyDown={(el) => {this.onKeyUp(el, this)}}>
+        return <div id="game-kb-catcher" className="game-container" tabIndex="0" onKeyDown={(ev) => {this.onKeyUp(ev)}}>
             <div>
                 <TheFolk mistakes={this.state.mistakes.length} style={{float: 'left'}} />
                 <div style={{}} className="tried-letters">
                 You missed: <br />
-                <span>
+                <span id="mistakes-holder">
                     {this.state.mistakesJSX}
                 </span>
                 </div>
@@ -137,9 +136,12 @@ class GameBoard extends Component
             </div>
                 <div className="lettersDisplay">
                     <div className="mobile-keyboard">
+                        <p>Keyboard</p>
                         {this.keyBoardButtons}
                     </div>
-                    {this.state.lettersJSX}                
+                    <span id="letters-display-in">
+                        {this.state.lettersJSX}       
+                    </span>         
                 </div>
                 {this.soundPlayers}
         </div>

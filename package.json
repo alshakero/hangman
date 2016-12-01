@@ -12,10 +12,19 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "cheerio": "^0.22.0",
     "classnames": "^2.2.5",
+    "enzyme": "^2.6.0",
+    "jquery": "^3.1.1",
     "react": "^15.4.1",
+    "react-addons-test-utils": "^15.4.1",
     "react-audio-player": "^0.3.0",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "whatwg-fetch": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
