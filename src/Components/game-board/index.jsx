@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TheFolk from '../the-folk';
-import BadChoice from './sounds/bad_choice.mp3';
-import GoodChoice from './sounds/good_choice.mp3';
-import YouWin from './sounds/you_win.mp3';
-import YouLose from './sounds/you_lose.mp3';
+import BadChoice from './sounds/bad_choice.wav';
+import GoodChoice from './sounds/good_choice.wav';
+import YouWin from './sounds/you_win.wav';
+import YouLose from './sounds/you_lose.wav';
 
 import './general.css';
 
