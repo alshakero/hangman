@@ -28,18 +28,15 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/intro/retina.jpg)
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/in/retina.jpg)
 
-### List of used image files
-
- -
-
- Yup, I did't use any raster images. Only purely CSSed DIVs with a tiny vector (430bytes) for the sweat on the folk's forehead.
+### How many images were used
+None, I did't use any raster images. Only purely CSSed DIVs with a tiny vector (430bytes) for the sweat on the folk's forehead.
  
 ### Playing the game
 You can play it [here], on GitHub pages. 
 
-
 ### Running the app locally
 After cloning the repository  
+
 ```sh
 $ cd NG-quiz
 $ npm install
@@ -57,7 +54,7 @@ $ npm run test
 ```sh
 $ cd NG-quiz
 $ npm run build
-#outputs in NG-quiz/build
+#outputs in ./build
 ```
 
 ### Notes
