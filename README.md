@@ -8,7 +8,7 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
   - [Chai], [chai-enzyme] for testing. 
   - Web Audio API for sound effects.
 
-### Feature
+### Features
 - Fully responsive. 
 - Works in all major browsers. Retina fellas are covered.
 - Lightweight. The whole app with it's assets is **~95KB**. 
@@ -29,7 +29,9 @@ This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 ![N|Solid](https://www.omaralshaker.com/git/netguru/shots/in/retina.jpg)
 
 ### List of used image files
+
  -
+
  Yup, I did't use any raster images. Only purely CSSed DIVs with a tiny vector (430bytes) for the sweat on the folk's forehead.
  
 ### Playing the game
