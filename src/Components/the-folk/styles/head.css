@@ -1,10 +1,12 @@
 .eyes-and-ears
 {
-    height: 3.5%; 
+    height: 5%;
     width: 100%;
     margin-top: 15%;
+    margin-bottom: 7%;
     position: relative;
-    display: inline-block
+    display: inline-block;
+    vertical-align: top;
 }
 .eye
 {
@@ -13,12 +15,13 @@
     background-color: #3e3e3f;
     margin-top: 3%;
     vertical-align: top; 
-    width: 3.5%; 
-    height: 50%; 
-    border-radius: 50%;
+    width: 5%; 
+    height: 90%; 
+    border-radius: 100%;
     display: inline-block;
     -webkit-animation: blink-eyes 10s infinite; 
     animation: blink-eyes 10s infinite;
+    transform-origin: 50% 50%
 }
 @-webkit-keyframes blink-eyes {
   0%   { height: 50%; }
@@ -60,10 +63,12 @@
 .ear 
 {
     background-color: #ffcd8a;
-    width: 12%;
+    width: 13%;
     height: 170%;
     border-radius: 50%;
     display: inline-block;
+    margin: -1%;;
+    vertical-align: top;
 }
 .ear .inner
 {
@@ -78,7 +83,7 @@
 {
     overflow: hidden;
     margin-top: -26%;
-    height: 52%
+    height: 54%;
 }
 .face
 {
@@ -114,12 +119,6 @@
 .hair .left
 {
     margin-right: 2%;
-}
-.nose-and-below
-{
-    overflow: hidden;
-    margin-top: -26%;
-    height: 52%;
 }
 .beard
 {
@@ -170,7 +169,7 @@
     margin-right: 3%;
     vertical-align: top;
     width: 20%;
-    height: 20%;
+    height: 15%;
     border-radius: 50%;
     background-color: rgb(160, 160, 160);
     display: inline-block;
