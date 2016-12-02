@@ -9,11 +9,9 @@ import "./styles/lowerbody.css";
 import sweat from "./styles/sweat.svg";
 
 class TheFolk extends Component {
-    constructor() {
-        super();
-    }
+
     render() {
-         (
+         return (
             <div className="chamber-wrapper">
                 <div className="background">
 
