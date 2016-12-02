@@ -5,6 +5,7 @@
 This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
 
   - [ReactJS], for re-usabily and my own comfort writing the app.
+  - [create-react-app], makes life easier, start coding in 2 mins.
   - [Chai], [chai-enzyme] for testing. 
   - Web Audio API for sound effects.
 
@@ -75,3 +76,4 @@ Yes. The virtual keyboard needs more logic. It's now drawn depending solely on s
 [chai-enzyme]: <https://github.com/producthunt/chai-enzyme>
 [here]: <https://alshakero.github.io/NG-quiz/>
 [little API]: <http://omaralshaker.com/word.php>
+[create-react-app]: <https://github.com/facebookincubator/create-react-app>
