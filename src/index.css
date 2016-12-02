@@ -29,8 +29,8 @@ body {
 @media (max-width: 685px) {
   #root
   {
-        margin: auto;
-        width: 95%;
-        padding: 2%; 
+      margin: auto;
+      width: 95%;
+      padding: 2%; 
   }
 }

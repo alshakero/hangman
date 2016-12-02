@@ -8,20 +8,37 @@ import YouLose from './sounds/you_lose.wav';
 import './general.css';
 
 class GameBoard extends Component
-{
-    init(props, construct)
+{    
+    constructor(props)
     {
+        super(props);
+        this.init(props, true);
+    }
+    init(props, calledFromConstructor)
+    {
+
+        // guessed letters display
         let lettersJSX = [];
+
+        //  array or raw missed chars
         let mistakes = [];
-        let mistakesJSX = [];
-        let chars = props.word.toUpperCase().split('');
+       
         // split word
+        let chars = props.word.toUpperCase().split('');
+
+        // Mistakes letter with it's HTML
+        let mistakesJSX = [];
+
         chars.forEach((el, i) => {
             lettersJSX.push(<div key={i} className="singleLetter">&nbsp;</div>);
         });
-        if(construct)
+
+        if(calledFromConstructor)
         {   
+            //bind game over callback
             this.gameOver = props.gameOver;
+
+            //initial state
             this.state = {chars, lettersJSX, mistakes, mistakesJSX};
 
             // some sound effects
@@ -31,6 +48,8 @@ class GameBoard extends Component
                 new Audio(YouWin),
                 new Audio(YouLose)            
             ];
+
+            //mobile keyboard 
             this.keyBoardButtons = [];
             for(let i = 65; i < 91; i++)
             {
@@ -38,7 +57,6 @@ class GameBoard extends Component
             }
         }
         else this.setState({chars, lettersJSX, mistakes, mistakesJSX});
-        this.score = 0;        
     }
     playAudio(index)
     {
@@ -46,11 +64,6 @@ class GameBoard extends Component
         {
             this.playeableSoundPlayers[index].play();
         }
-    }
-    constructor(props)
-    {
-        super(props);
-        this.init(props, true);
     }
     componentWillReceiveProps(props)
     {
@@ -65,18 +78,20 @@ class GameBoard extends Component
     recordChar(char, comp)
     {
         let mistakes = comp.state.mistakes;
-        if(comp.state.chars.indexOf(char) === -1)
+        if(comp.state.chars.indexOf(char) === -1) // a bad character
         {   
             this.playAudio(0);
-            if(mistakes.indexOf(char) === -1)
+            if(mistakes.indexOf(char) === -1) // make sure they didn't make this mistake before
             {
                 mistakes.push(char);
                 let mistakesJSX = mistakes.map((el, i) => {return <span key={i}>{el}</span>});
                 comp.setState({mistakes, mistakesJSX});                  
-            }
-            else // already made this mistake?
+            } // yup, they made it
+            else 
             {
                 let index = mistakes.indexOf(char);
+
+                //blink the duplicate for a better UX
                 comp.state.mistakesJSX[index] = <span key={index} style={{color: '#e888b9'}}>{char}</span>
                 comp.setState({mistakesJSX: comp.state.mistakesJSX});
                 setTimeout(() => {
@@ -91,7 +106,7 @@ class GameBoard extends Component
                 this.gameOver(comp.props.parent, false);
             }
         }
-        else
+        else // a good character
         {
             this.playAudio(1);
             let lettersJSX = this.state.lettersJSX;
@@ -115,8 +130,9 @@ class GameBoard extends Component
     }
     onKeyUp(ev)
     {        
+        // I don't know why, but enzyme testing string doesn't have toUpperCase, hence the casting
         let char = ("" + ev.key).toUpperCase(); 
-        if(char.match(/[a-z]/i) && char.length === 1) // A-Z and not shift, alt etc..
+        if(char.match(/[a-z]/i) && char.length === 1) // A-Z and not shift, alt, etc..
         {           
             this.recordChar(char, this);
         }
@@ -126,12 +142,12 @@ class GameBoard extends Component
         return <div id="game-kb-catcher" className="game-container" tabIndex="0" onKeyDown={(ev) => {this.onKeyUp(ev)}}>
             <div>
                 <TheFolk mistakes={this.state.mistakes.length} style={{float: 'left'}} />
-                <div style={{}} className="tried-letters">
+                <div className="tried-letters">
                 You missed: <br />
                 <span id="mistakes-holder">
                     {this.state.mistakesJSX}
                 </span>
-                </div>
+                </div>                
                 <div style={{clear: 'both'}}/>
             </div>
                 <div className="lettersDisplay">

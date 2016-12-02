@@ -11,6 +11,8 @@ class TheWholeGame extends Component
         this.state = {overlayShown: true, word: "empty", overlayMessage:"Let's play!", overlayMessageButton: "Start"}
         this.loading = false;
     }
+
+    //game over callback
     gameOver(comp, won)
     {
         window.scrollTo(0, 0);
@@ -19,6 +21,8 @@ class TheWholeGame extends Component
         else
             comp.setState({overlayShown: true, overlayMessage:"Game over", overlayMessageButton:"New game"});
     }
+
+    //I encapsule to ease mocking it up in testing
     encapsuledFetch(url, ok , error)
     {
         fetch(url, {mode: 'cors'}).then((resp) =>
@@ -44,6 +48,7 @@ class TheWholeGame extends Component
     }
     render()
     {
+        //to recieve a `fetch` callback from the testing unit
         this.encapsuledFetch = this.props.fetch ? this.props.fetch : this.encapsuledFetch;
         return <div>
                     {this.state.overlayShown ? 

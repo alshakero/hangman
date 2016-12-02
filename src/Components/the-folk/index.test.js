@@ -22,7 +22,7 @@ describe('testing the folk', function()
                 mistakes++;
             });
         }
-        // hop and torso are both on mistake (two hidden elements one mistake), causing a shift
+        // hip and torso are both attached to one mistake (two hidden elements one mistake), causing an offset
         for(let i = 9; i > 1; i--)
         {
             it(`It should have ${i} hidden elements`, () => {
