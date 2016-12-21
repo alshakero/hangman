@@ -1,11 +1,11 @@
 {
   "name": "netguru",
-  "homepage": "https://alshakero.github.io/NG-quiz/",
+  "homepage": "https://alshakero.github.io/hangman/",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/alshakero/NG-quiz.git"
+    "url": "https://github.com/alshakero/hangman.git"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
