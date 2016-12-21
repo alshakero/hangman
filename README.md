@@ -39,7 +39,7 @@ You can play it [here], on GitHub pages.
 After cloning the repository  
 
 ```sh
-$ cd NG-quiz
+$ cd hangman
 $ npm install
 $ npm run start
 ```
@@ -47,13 +47,13 @@ the go to `http://localhost:3000`
 
 ### Testing 
 ```sh
-$ cd NG-quiz
+$ cd hangman
 $ npm run test
 ```
 
 ### Production Build 
 ```sh
-$ cd NG-quiz
+$ cd hangman
 $ npm run build
 #outputs in ./build
 ```
@@ -74,6 +74,6 @@ Yes. The virtual keyboard needs more logic. It's now drawn depending solely on s
 [ReactJS]: <https://github.com/reactjs>
 [chai]: <http://chaijs.com/>
 [chai-enzyme]: <https://github.com/producthunt/chai-enzyme>
-[here]: <https://alshakero.github.io/NG-quiz/>
+[here]: <https://alshakero.github.io/hangman/>
 [little API]: <http://omaralshaker.com/word.php>
-[create-react-app]: <https://github.com/facebookincubator/create-react-app>
+[create-react-app]: H<https://github.com/facebookincubator/create-react-app>
