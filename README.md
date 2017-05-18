@@ -1,5 +1,4 @@
-# Hangman for 
-[![N|Solid](https://www.omaralshaker.com/git/netguru/logo.jpg)](https://www.netguru.co/)
+# Hangman 
 
 ### Introducion
 This is a ReactJS app for Netguru. Here I'll list the libs I've used and why.
